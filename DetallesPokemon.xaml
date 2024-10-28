@@ -1,0 +1,112 @@
+﻿<Page xmlns:my="using:Pokemon_Antonio_Campallo_Gomez" 
+    x:Class="IPO_2024_IPokemon_AntonioGeorgiNoelia.DetallesPokemon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IPO_2024_IPokemon_AntonioGeorgiNoelia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush x:Name="imMisPokemons" ImageSource="/Assets/mispokemondetalles.png"/>
+        </Grid.Background>
+
+        <Grid x:Name="ContentArea">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50* "/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="20* "/>
+                </Grid.RowDefinitions>
+
+                <my:ArticunoACG x:Name="articuno" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <my:ButterFreeACC x:Name="butterfree" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <my:ChandelureNDAA x:Name="chandelure" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <my:CharizardASM x:Name="charizard" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <my:GarchompVFJD x:Name="garchomp" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <my:GengarJCC x:Name="gengar" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <my:Lapras x:Name="lapras" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <my:MyUCLucario x:Name="lucario" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <my:MakuhitaAPQ2 x:Name="makuhita" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <my:ScizorAPJ x:Name="scizor" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <my:SnorlaxROC x:Name="snorlax" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <my:ToxicroackJPG x:Name="toxicroak" Margin="0,40,20,0" Visibility="Collapsed"/>
+                <Viewbox Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="10*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="10*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button x:Name="btnDefensa" Content="Defensa" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25" Foreground="Black" FontWeight="Bold" Click="btnDefensa_Click" Grid.Row="1" Grid.Column="1" Opacity="0.9" Margin="0,0,0,30">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Assets/boton1.jpg" Stretch="UniformToFill"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="btnDescasar" Content="Descansar" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25" Foreground="Black" FontWeight="Bold"  Click="btnDescansar_Click" Grid.Row="1" Grid.Column="0" Opacity="0.9" Margin="30,0,0,30">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Assets/boton2.jpg" Stretch="UniformToFill"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="btnAtaqueDebil" Content="Ataque Débil" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25" Foreground="Black" FontWeight="Bold"  Click="btnAtaqueDebil_Click" Grid.Row="0" Grid.Column="1" Opacity="0.9" Margin="0,30,0,0" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Assets/boton3.jpg" Stretch="UniformToFill"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="btnAtaqueFuerte" Content="Ataque Fuerte" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25" Foreground="Black" FontWeight="Bold"   Click="btnAtaqueFuerte_Click" Grid.Row="0" Grid.Column="0" Opacity="0.9" Margin="30,30,0,0" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Assets/boton4.jpg" Stretch="UniformToFill"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="btnHerido" Content="Herido" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25" Foreground="Black" FontWeight="Bold"  Click="btnHerido_Click" Grid.Row="0" Grid.Column="2" Margin="0,30,30,0" Opacity="0.9">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Assets/boton5.jpg" Stretch="UniformToFill"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="btnCansado" Content="Cansado" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="25" Foreground="Black" FontWeight="Bold"  Click="btnCansado_Click" Grid.Row="1" Grid.Column="2" Margin="0,0,30,30" Opacity="0.9" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Assets/boton6.jpg"/>
+                            </Button.Background>
+                        </Button>
+                    </Grid>
+                </Viewbox>
+
+            </Grid>
+            <RelativePanel Margin="40" Opacity="0.9" Background="Black">
+                <Image x:Name="pokemonImagenPokedex" Source="{Binding Image}" Width="280" Height="380" Margin="20,20,0,0"/>
+                <TextBlock x:Name="tbNombrePokedex" TextWrapping="Wrap" Foreground="White"  FontSize="18" Margin="15,50,30,0" RelativePanel.RightOf="pokemonImagenPokedex"/>
+                <TextBlock x:Name="tbCategoriaPokedex" TextWrapping="Wrap" Foreground="White"  FontSize="18" Margin="15,40,30,0" RelativePanel.RightOf="pokemonImagenPokedex" RelativePanel.Below="tbNombrePokedex"/>
+                <TextBlock x:Name="tbAlturaPokedex" TextWrapping="Wrap" Foreground="White"  FontSize="18" Margin="15,40,30,0" RelativePanel.RightOf="pokemonImagenPokedex" RelativePanel.Below="tbCategoriaPokedex"/>
+                <TextBlock x:Name="tbPesoPokedex" TextWrapping="Wrap" Foreground="White" FontSize="18" Margin="15,40,30,0" RelativePanel.RightOf="pokemonImagenPokedex" RelativePanel.Below="tbAlturaPokedex"/>
+                <TextBlock x:Name="tbEvolucionPokedex" TextWrapping="Wrap" Foreground="White"  FontSize="18" Margin="15,40,30,0" RelativePanel.RightOf="pokemonImagenPokedex" RelativePanel.Below="tbPesoPokedex"/>
+                <TextBlock x:Name="tbDescripcionPokedex" TextWrapping="Wrap" Foreground="White"  FontSize="18" Margin="30,0,30,0" RelativePanel.Below="pokemonImagenPokedex" />
+                <ItemsControl x:Name="tbTipoPokedex" ItemsSource="{Binding Types}" RelativePanel.Below="tbDescripcionPokedex" Margin="15,0,40,0" >
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Background="{Binding Color}" CornerRadius="5" Margin="15">
+                                <TextBlock Text="{Binding TypeName}" Foreground="White" Margin="15" FontWeight="Bold" FontSize="18"/>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </RelativePanel>
+
+        </Grid>
+    </Grid>
+</Page>

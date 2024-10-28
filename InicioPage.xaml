@@ -1,0 +1,37 @@
+﻿<Page xmlns:my="using:Pokemon_Antonio_Campallo_Gomez" 
+    x:Class="IPO_2024_IPokemon_AntonioGeorgiNoelia.InicioPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IPO_2024_IPokemon_AntonioGeorgiNoelia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="40"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="150*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="imageFondo" Source="/Assets/pokemonFondo.png" Grid.RowSpan="5" Grid.ColumnSpan="4" Stretch="UniformToFill" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Viewbox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+            <Image x:Name="imagenPokemon" Source="/Assets/Bienvenido.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Height="150"/>
+        </Viewbox>
+        <Viewbox  Grid.Row="2" Grid.RowSpan="3" Grid.Column="2">
+            <Image x:Name="imagehechoPor"  Source="/Assets/HechoPorSinFondo.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="400" Height="500"/>
+        </Viewbox>
+        <Viewbox Grid.Row="2" Grid.RowSpan="3" Grid.Column="1">
+            <Image x:Name="imageFantina" Source="/Assets/Fantina.png" Grid.Row="2" Grid.RowSpan="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10"/>
+        </Viewbox>
+
+    </Grid>
+</Page>

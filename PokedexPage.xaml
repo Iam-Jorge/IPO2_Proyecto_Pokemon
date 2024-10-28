@@ -1,0 +1,84 @@
+﻿<Page
+    x:Class="IPO_2024_IPokemon_AntonioGeorgiNoelia.PokedexPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IPO_2024_IPokemon_AntonioGeorgiNoelia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#c18f52">
+    <Page.Resources>
+        <CollectionViewSource x:Key="GroupedPokemonCollection"
+                              IsSourceGrouped="True"
+                              Source="{Binding PokemonsGrouped}" />
+    </Page.Resources>
+
+    <Frame x:Name="fmPokedex">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="320" />
+            </Grid.ColumnDefinitions>
+            <ListView Grid.Column="0" Margin="10"
+       IsItemClickEnabled="True"
+       ItemClick="InfoPokemon"
+       ItemsSource="{Binding Source={StaticResource GroupedPokemonCollection}}" SelectionChanged="ListView_SelectionChanged">
+                <ListView.Background>
+                    <ImageBrush ImageSource="/Assets/PokedexBackgroud.jpg" Stretch="UniformToFill"/>
+                </ListView.Background>
+                <ListView.GroupStyle>
+                    <GroupStyle HidesIfEmpty="True">
+                        <GroupStyle.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Key}" Foreground="Black" FontSize="22" FontWeight="Bold" Margin="50"/>
+                            </DataTemplate>
+                        </GroupStyle.HeaderTemplate>
+                    </GroupStyle>
+                </ListView.GroupStyle>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Image Source="{Binding Image}" Width="100" Height="100" Margin="50,5,50,5"/>
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="15,0,0,0">
+                                <TextBlock Text="{Binding Name}" Foreground="Black" FontWeight="Bold" FontSize="20"/>
+                                <Grid VerticalAlignment="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <ItemsControl ItemsSource="{Binding Types}" Grid.Column="0" Width="200">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Border Background="{Binding Color}" CornerRadius="5" Margin="0,0,5,0">
+                                                    <TextBlock Text="{Binding TypeName}" Foreground="White" Margin="10,2" FontWeight="Bold" FontSize="18"/>
+                                                </Border>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </Grid>
+                            </StackPanel>
+                            <Grid Margin="300,40,5,40">
+                                <Border Background="#ADD8E6" CornerRadius="5" HorizontalAlignment="Right">
+                                    <TextBlock Text="{Binding GenderIcon}" Foreground="Black" FontSize="18" FontWeight="Bold" Margin="10"/>
+                                </Border>
+                            </Grid>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!-- Filtros de búsqueda a la derecha -->
+            <StackPanel Grid.Column="1" Margin="10,10,10,0" VerticalAlignment="Top" Background="#c18f52" Padding="10">
+                <TextBlock Text="Filtrar por Nombre:" FontSize="16" Foreground="SaddleBrown" Margin="0,0,0,10"/>
+                <TextBox x:Name="NameSearchBox" PlaceholderText="Nombre" Foreground="Black" Margin="0,0,0,10" FontWeight="Bold" TextChanged="SearchBox_TextChanged" Width="280"/>
+                <TextBlock Text="Filtrar por Tipo:" FontSize="16" Foreground="SaddleBrown" Margin="0,0,0,10"/>
+                <TextBox x:Name="TypeSearchBox" PlaceholderText="Tipo" Foreground="Black" Margin="0,0,0,0" FontWeight="Bold" TextChanged="TypeSearchBox_TextChanged" Width="280"/>
+            </StackPanel>
+        </Grid>
+    </Frame>
+</Page>

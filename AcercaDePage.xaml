@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="IPO_2024_IPokemon_AntonioGeorgiNoelia.AcercaDePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IPO_2024_IPokemon_AntonioGeorgiNoelia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/acercade.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0">
+            <TextBlock Text="Creadores" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="White" Margin="5,5,5,5"/>
+        </Viewbox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Row="0" Grid.Column="0">
+                <PersonPicture ProfilePicture="/Assets/Noelia.jpeg" VerticalAlignment="Center" Margin="5,0,5,0"/>
+            </Viewbox>
+            <Viewbox Grid.Row="0" Grid.Column="1">
+                <PersonPicture Grid.Column="1" Grid.Row="0" ProfilePicture="/Assets/Antonio.jpeg" VerticalAlignment="Center" Margin="5,0,5,0"/>
+            </Viewbox>
+            <Viewbox Grid.Row="0" Grid.Column="2">
+                <PersonPicture Grid.Column="2" Grid.Row="0" ProfilePicture="/Assets/Georgi.jpeg" VerticalAlignment="Center" Margin="5,0,5,0"/>
+            </Viewbox>
+            <Viewbox Grid.Row="1" Grid.Column="0">
+                <TextBlock Grid.Row="1" Text="Noelia Díaz Alejo Alejo" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="White" TextWrapping="Wrap" Margin="20,0,20,0"/>
+            </Viewbox>
+            <Viewbox Grid.Row="1" Grid.Column="1">
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="Antonio Campallo Gómez" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  Foreground="White" TextWrapping="Wrap" Margin="20,0,20,0"/>
+            </Viewbox>
+            <Viewbox Grid.Row="1" Grid.Column="2">
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="Georgi Angelov Chervenyashki" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="White" TextWrapping="Wrap" Margin="20,0,20,0"/>
+            </Viewbox>
+
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Row="0">
+                <TextBlock Text="Valoración" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" Foreground="White"/>
+            </Viewbox>
+            <Viewbox Grid.Row="1">
+                <RatingControl  AutomationProperties.Name="RatingControl with placeholder" PlaceholderValue="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            </Viewbox>
+            <Viewbox Grid.Row="2">
+                <Button Content="Opinar" Foreground="White" Background="DarkOrange" BorderBrush="DarkOrange" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,5,5,5" Click="Button_Click"/>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</Page>

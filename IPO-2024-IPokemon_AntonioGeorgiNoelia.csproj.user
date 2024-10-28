@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectView>ProjectFiles</ProjectView>
+    <AppIconSource>C:\Users\usuario\OneDrive - Universidad de Castilla-La Mancha\Documentos\IPOII-LAB\IPO-2024-IPokemon_AntonioGeorgiNoelia\IPO-2024-IPokemon_AntonioGeorgiNoelia\Assets\LogoPokeball.png</AppIconSource>
+    <SmallTileSource>C:\Users\usuario\OneDrive - Universidad de Castilla-La Mancha\Documentos\IPOII-LAB\IPO-2024-IPokemon_AntonioGeorgiNoelia\IPO-2024-IPokemon_AntonioGeorgiNoelia\Assets\LogoPokeball.png</SmallTileSource>
+    <MediumTileSource>C:\Users\usuario\OneDrive - Universidad de Castilla-La Mancha\Documentos\IPOII-LAB\IPO-2024-IPokemon_AntonioGeorgiNoelia\IPO-2024-IPokemon_AntonioGeorgiNoelia\Assets\LogoPokeball.png</MediumTileSource>
+    <WideTileSource>C:\Users\usuario\OneDrive - Universidad de Castilla-La Mancha\Documentos\IPOII-LAB\IPO-2024-IPokemon_AntonioGeorgiNoelia\IPO-2024-IPokemon_AntonioGeorgiNoelia\Assets\LogoPokeball.png</WideTileSource>
+    <LargeTileSource>C:\Users\usuario\OneDrive - Universidad de Castilla-La Mancha\Documentos\IPOII-LAB\IPO-2024-IPokemon_AntonioGeorgiNoelia\IPO-2024-IPokemon_AntonioGeorgiNoelia\Assets\LogoPokeball.png</LargeTileSource>
+    <SplashScreenSource>C:\Users\usuario\OneDrive - Universidad de Castilla-La Mancha\Documentos\IPOII-LAB\IPO-2024-IPokemon_AntonioGeorgiNoelia\IPO-2024-IPokemon_AntonioGeorgiNoelia\Assets\LogoPokeball.png</SplashScreenSource>
+    <BadgeLogoSource>C:\Users\usuario\OneDrive - Universidad de Castilla-La Mancha\Documentos\IPOII-LAB\IPO-2024-IPokemon_AntonioGeorgiNoelia\IPO-2024-IPokemon_AntonioGeorgiNoelia\Assets\LogoPokeball.png</BadgeLogoSource>
+    <PackageLogoSource>C:\Users\usuario\OneDrive - Universidad de Castilla-La Mancha\Documentos\IPOII-LAB\IPO-2024-IPokemon_AntonioGeorgiNoelia\IPO-2024-IPokemon_AntonioGeorgiNoelia\Assets\LogoPokeball.png</PackageLogoSource>
+  </PropertyGroup>
+</Project>
